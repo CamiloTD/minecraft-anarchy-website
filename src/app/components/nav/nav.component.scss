@@ -1,0 +1,39 @@
+$pnav:32px;
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $pnav 0 $pnav;
+    height: 64px;
+    font-style: normal;
+    line-height: 18px;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    a{
+        padding-top: 25px;
+        font-size: 23px;
+        font-weight: normal;
+    }
+    ul{
+        display: flex;
+        width: 19%;
+        padding-top: 6px;
+        height: 80%;
+        font-size: 18px;
+        justify-content: space-between;
+        text-align: center;
+        color: black;
+        li{
+            cursor: pointer;
+            vertical-align: middle;
+            padding-top: 20px;
+            width: 50%;
+            border-left: 1px solid rgba(94, 94, 94, 0.4);
+            transition: 0.7s;
+        }
+        li:hover{
+            background-color: rgba(94, 94, 94, 0.1);;
+        }
+    }
+  
+}
