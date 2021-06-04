@@ -7,15 +7,17 @@ import { HomeComponent } from './scenes/home/home.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { HomeModule } from './scenes';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
     
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     RouterModule.forRoot(routes),
     HomeModule,
   ],
