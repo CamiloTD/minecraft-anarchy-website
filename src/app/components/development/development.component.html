@@ -1,1 +1,58 @@
-<p>development works!</p>
+<div class="main">
+    <div class="ui card">
+        <div class="content">
+          <div class="header">Swap Assets</div>
+        </div>
+        <div class="content">
+            <div class="ui fluid selection dropdown top-dd" id="originAsset">
+                <input type="hidden" name="user">
+                <i class="dropdown icon"></i>
+                <div class="default text">Asset #1</div>
+                <div class="menu">
+                  <ng-container *ngFor="let token of tokenList">
+                        <div class="item" attr.data-value="{{token.address}}">
+                          <img class="ui mini avatar image" [src]="token.logoURI">
+                          {{ token.name }}
+                        </div>
+                  </ng-container>
+                </div>
+            </div>
+            <div class="ui input fluid bottom-dd">
+              <input 
+                type="number" 
+                class="bottom-dd" 
+                placeholder="Amount"
+                (keyup)="calculateAmountsOut('top', +getValue($event))"
+                id="originInput"
+              >
+            </div>
+        </div>
+        <div class="content">
+          <div class="ui fluid selection dropdown top-dd" id="destinationAsset">
+            <input type="hidden" name="user">
+            <i class="dropdown icon"></i>
+            <div class="default text">Asset #2</div>
+            <div class="menu">
+              <ng-container *ngFor="let token of tokenList">
+                    <div class="item" attr.data-value="{{token.address}}">
+                      <img class="ui mini avatar image" [src]="token.logoURI">
+                      {{ token.name }}
+                    </div>
+              </ng-container>
+            </div>
+          </div>
+          <div class="ui input fluid bottom-dd">
+            <input 
+              type="number" 
+              class="bottom-dd" 
+              placeholder="Amount" 
+              (keyup)="calculateAmountsOut('bottom', +getValue($event))"
+              id="destInput"
+            >
+          </div>
+        </div>
+        <div class="content">
+          <button class="ui button fluid">Swap</button>
+        </div>
+    </div>
+</div>

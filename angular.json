@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "caronline-network": {
+    "coraline-network": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/caronline-network",
+            "outputPath": "dist/coraline-network",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "caronline-network:build:production"
+              "browserTarget": "coraline-network:build:production"
             },
             "development": {
-              "browserTarget": "caronline-network:build:development"
+              "browserTarget": "coraline-network:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "caronline-network:build"
+            "browserTarget": "coraline-network:build"
           }
         },
         "test": {
@@ -107,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "caronline-network"
+  "defaultProject": "coraline-network"
 }

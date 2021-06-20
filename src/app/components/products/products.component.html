@@ -1,1 +1,55 @@
-<p>products works!</p>
+<div class="ui statistic stats">
+    <div class="value">
+      {{ totalWalletAmount.toFixed(2) }}
+    </div>
+    <div class="label">
+      Obsidian in market cap
+    </div>
+  </div>
+
+<table class="ui five column table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Your Balance</th>
+            <th>Your capitalization</th>
+            <th>Liquidity</th>
+            <th>Price</th>
+            <th>24h Change</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let token of displayTokenList">
+            <td>
+                <img class="item-icon" [src]="token.logoURI">
+                {{token.name}}
+            </td>
+            <td class="split-label">
+                {{tokenBalances[token.address]}}
+                <img *ngIf="tokenPrices[token.address]" class="ui left floated image item-icon" [src]="token.logoURI">
+            </td>
+            <td class="split-label">
+                {{tokenBalances[token.address] * tokenPrices[token.address].price}}
+                <img class="ui left floated image item-icon" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
+            </td>
+            <td>
+                {{tokenPrices[token.address] && tokenPrices[token.address].tokenBalance.toFixed(1) }} 
+                <div class="placeholder-liquidity ui placeholder" *ngIf="!tokenPrices[token.address]">
+                    <div class="very short line"></div>
+                </div>
+                
+                <img *ngIf="tokenPrices[token.address]" class="item-icon" [src]="token.logoURI">
+                {{tokenPrices[token.address] && tokenPrices[token.address]?.baseBalance.toFixed(1)}} 
+                <div class="placeholder-liquidity ui placeholder" *ngIf="!tokenPrices[token.address]">
+                    <div class="very short line"></div>
+                </div>
+                <img class="item-icon" *ngIf="tokenPrices[token.address]" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
+            </td>
+            <td>
+                {{(tokenPrices[token.address]?.price).toFixed(4)}}
+                <img class="item-icon" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
+            </td>
+            <td>0</td>
+        </tr>
+    <tbody>
+</table>
