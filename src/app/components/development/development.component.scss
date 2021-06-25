@@ -21,8 +21,11 @@
 .main {
     display: grid;
     width: 100%;
-    height: 100%;
-
+    height: 60%;
+    background-color: #fff ;
+    margin-top: -0.35%;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
     justify-content: center;
     align-items: center;
 }
@@ -36,4 +39,69 @@
 .top-dd {
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
+}
+
+.main-div{
+    height: 25rem;
+    width: 100%;
+    background-image: url("../../../assets/paints/paint7.jpeg");
+    height: 58rem;
+    background-attachment: fixed;
+}
+
+.image-background{
+    width: 100%;
+    margin-top: 5.3rem;
+}
+
+.title1{
+    color:#1A6D63 !important;
+    font-weight: 900 !important;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+
+.type-font{
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.card{
+    width: 40rem;
+    height: 80%;
+
+}
+
+.width-button{
+    width: 40%;
+    background-color: #1A6D63;
+    align-self: center !important;
+    color: #fff;
+    margin-top: 2rem;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+:hover.width-button{
+    color: #fff;
+    background-color: #133f3b;
+
+}
+
+.color-input{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.arrow{
+    color:#1A6D63;
+    align-self: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-left: 47%;
+    margin-right: 47%;
+}
+
+.separar{
+    margin-bottom: 1rem;
+
 }

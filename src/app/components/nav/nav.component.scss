@@ -1,5 +1,26 @@
 img {
-    height: 18px;
-    width: 18px !important;
+    height: 2rem;
+    width: 2rem !important;
     margin-right: 16px !important;
+}
+
+.main-item{
+    font-weight: 900 !important;
+    font-size: 1.5rem;
+}
+
+.item {
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+    color: #fff !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center !important; 
+    justify-content:flex-end
+}
+
+.ui.secondary.pointing.menu {
+    background-color: #005D52;
+    height: 4rem;
+    padding-bottom: auto;
+    padding-top: auto;
 }

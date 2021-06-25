@@ -21,6 +21,8 @@ export class ProductsComponent implements OnInit {
   async ngOnInit() {
     this.displayTokenList = await loadTokens();
     this.totalWalletAmount = this.displayTokenList.reduce((prev, token) => (TokenBalance[token.address] * TokenData[token.address].price) + prev, 0);
+
+    console.log(this.displayTokenList)
     console.log(this.tokenPrices)
   }
 

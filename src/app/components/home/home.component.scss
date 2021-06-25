@@ -1,178 +1,118 @@
-.container{
-    width: 100%;
-    margin-top: 5%;
-    height: auto;
-    display: flex;
-    .c-width{
-        width: 50%;
-       
-        height: auto;
-        p{
-            text-align: center;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-           
-        }
-        .title-top{
-            margin-bottom: 50px;
-            margin-top: 5px;
-        }
-        .title-bottom{
-            margin-top: 50px;
-        }
-        .container-img{
-            width: 500px;
-            margin: auto;
-            height: 500px;
-            overflow: hidden;
-            border-radius: 50%;
-            cursor: progress;
-            div{
-                width: 300%;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease;
-                animation-duration: 10s;
-                animation-name: world-crcle;
-                display: block;
-                img{
-                    transition: 1s ease;
-                }
-                img:hover{
-                    transform: scale(1.2) translateX(10%) translateY(10%);
-                }
-            }
-            
-        }
+.img-steve{
+    width: 87%;
+    margin-top: 13%;
+}
 
-       
-      
-        @keyframes world-crcle{
-            0% {
-                
-            } 
-            20% {
-                transform: translateX(-100px);
-                transform: translateY(-115px);
-            }
-            40%{
-                transform: translateY(-57px);
-                transform: translateX(-57px);
-               
-            }
-            60%{
-                transform: translateX(-120px);
-                
-            }
-            80%{
-                transform: translateY(12px);
-            }
-          }
-       
+.container {
+    display: grid;
+    grid-template-columns: 43vw 57vw;
+}
 
-    }
-    .container-navigate{
-        ul{
-            width: 75%;
-            padding-top: 180px;
-            display: block;
-            margin:auto;
-            align-items: center;
-            li{
-                width: 80%;
-                cursor: pointer;
-                height: 28px;
-                padding: 16px;
-                line-height: 30px;
-                margin: 20px auto 20px auto;
-                text-align: center;
-                border: 1px solid black;
-                transition: 800ms;
-            }
-            li:hover{
-                background-color: rgba(48, 47, 47, 0.1);;
-            }
-        }
-    }
+.type-font{
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.color-button{
+    background-color: #005D52 !important;
+}
+
+.ui.button {
+    background-color: #005D52 !important;
+    color: #fff;
+    width: 70%;
+    font-size: 1.6rem;
+    font-weight: 900;
+    
     
 }
 
+.ui.button:hover {
+    background-color: #337D75 !important;
+    
+}
 
-@media (max-height: 820px) {
+.title1{
+    font-size: 4.5rem;
+    font-weight: bolder;
+    line-height: 5rem;
+}
+.column1{
+    align-self: center ;
+    text-align: center;
+    margin-left: 5rem;
+    
+}
 
-    .container{
-                width: 100%;
-                margin-top: 1%;
-                height: auto;
-                display: flex;
-                .c-width{
-                    width: 50%;
-                   
-                    height: auto;
-            p{
-                text-align: center;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-               
-            }
-            .title-top{
-                margin-bottom: 25px;
-                margin-top: 120px;
-            }
-            .title-bottom{
-                margin-top: 25px;
-            }
-            .container-img{
-                width: 400px;
-                margin: auto;
-                height:400px;
-                overflow: hidden;
-                border-radius: 50%;
-                cursor: progress;
-                div{
-                    width: 300%;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: ease;
-                    animation-duration: 20s;
-                    animation-name: world-crcle;
-                    display: block;
-                    img{
-                        transition: 1s ease;
-                    }
-                    img:hover{
-                        transform: scale(1.2);
-                    }
-                }
-                
-            }
-            .container-navigate{
-                ul{
-                    width: 75%;
-                    padding-top: 130px;
-                    display: block;
-                    margin:auto;
-                    align-items: center;
-                    li{
-                        width: 80%;
-                        cursor: pointer;
-                        height: 28px;
-                        padding: 16px;
-                        line-height: 30px;
-                        margin: 20px auto 20px auto;
-                        text-align: center;
-                        border: 1px solid black;
-                        transition: 800ms;
-                    }
-                    li:hover{
-                        background-color: rgba(48, 47, 47, 0.1);;
-                    }
-                }
-            }
-          }
-        }
-    }
+.p1{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
+}
 
+.square{
+    margin-top: -5.98%;
+    width: 100%;
+    height: 6.4rem;
+    background-color: #005D52;
+}
 
+.content{
+    text-align: center;
+}
 
+.width-image{
+    height: 10rem;
+}
 
+.width-card{
+    width: 17rem;
+    height: 30rem;
+}
+
+.separation{
+    margin-top: 5rem;
+    padding: auto;
+    
+}
+
+.sizelette{
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    
+}
+
+.centercards{
+    width: 80%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h3{
+    font-size: 1.6rem !important;
+    margin: 2rem !important;
+}
+
+.pa{
+    font-size: 1.2rem;
+    margin: 2rem !important;
+}
+
+.between{
+    background-image: url("../../../assets/paints/paint7.jpeg");
+    background-attachment: fixed;
+    height: 25rem;
+    width: 100%;
+    margin-top: -20rem;
+}
+
+.shadow{
+    height: 25rem;
+    width: 100%;
+    background-color: rgba($color: #005d52, $alpha: 0.4) ;
+    margin-top: -25rem;
+}
+
+.card-semi{
+    width: 60rem !important;
+}

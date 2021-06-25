@@ -1,58 +1,76 @@
-<div class="main">
-    <div class="ui card">
-        <div class="content">
-          <div class="header">Swap Assets</div>
-        </div>
-        <div class="content">
-            <div class="ui fluid selection dropdown top-dd" id="originAsset">
-                <input type="hidden" name="user">
-                <i class="dropdown icon"></i>
-                <div class="default text">Asset #1</div>
-                <div class="menu">
-                  <ng-container *ngFor="let token of tokenList">
-                        <div class="item" attr.data-value="{{token.address}}">
-                          <img class="ui mini avatar image" [src]="token.logoURI">
-                          {{ token.name }}
-                        </div>
-                  </ng-container>
-                </div>
+<div class="main-div">
+
+  <img class="image-background" src="../../../assets/imgs/squareheadlittle.png" alt="malamente">
+
+
+
+    <div class="main">
+      <div class=" card">
+          <div class="content">
+            <div class="title1 type-font">Swap Assets</div>
+          </div>
+          <div class="content">
+              <div class="ui fluid selection dropdown top-dd type-font" id="originAsset">
+                  <input class="type-font" type="hidden" name="user">
+                  <i class="dropdown icon"></i>
+                  <div class="default text type-font">Asset #1</div>
+                  <div class="menu type-font">
+                    <ng-container *ngFor="let token of tokenList">
+                          <div class="item" attr.data-value="{{token.address}}">
+                            <img class="ui mini avatar image type-font" [src]="token.logoURI">
+                            {{ token.name }}
+                          </div>
+                    </ng-container>
+                  </div>
+              </div>
+
+
+
+              <div class="ui input fluid bottom-dd color-input">
+                <input 
+                  type="number" 
+                  class="bottom-dd type-font" 
+                  placeholder="Amount"
+                  (keyup)="calculateAmountsOut('top', +getValue($event))"
+                  id="originInput"
+                >
+              </div>
+          </div>
+
+          <i class="arrow down icon"></i>
+
+          <div class="content">
+            <div class="ui fluid selection dropdown top-dd separar" id="destinationAsset">
+              <input type="hidden" name="user" class="type-font">
+              <i class="dropdown icon"></i>
+              <div class="default text type-font">Asset #2</div>
+              <div class="menu">
+                <ng-container *ngFor="let token of tokenList">
+                      <div class="item" attr.data-value="{{token.address}}">
+                        <img class="ui mini avatar image" [src]="token.logoURI">
+                        {{ token.name }}
+                      </div>
+                </ng-container>
+              </div>
             </div>
             <div class="ui input fluid bottom-dd">
               <input 
                 type="number" 
-                class="bottom-dd" 
-                placeholder="Amount"
-                (keyup)="calculateAmountsOut('top', +getValue($event))"
-                id="originInput"
+                class="bottom-dd type-font" 
+                placeholder="Amount" 
+                (keyup)="calculateAmountsOut('bottom', +getValue($event))"
+                id="destInput"
               >
             </div>
-        </div>
-        <div class="content">
-          <div class="ui fluid selection dropdown top-dd" id="destinationAsset">
-            <input type="hidden" name="user">
-            <i class="dropdown icon"></i>
-            <div class="default text">Asset #2</div>
-            <div class="menu">
-              <ng-container *ngFor="let token of tokenList">
-                    <div class="item" attr.data-value="{{token.address}}">
-                      <img class="ui mini avatar image" [src]="token.logoURI">
-                      {{ token.name }}
-                    </div>
-              </ng-container>
-            </div>
           </div>
-          <div class="ui input fluid bottom-dd">
-            <input 
-              type="number" 
-              class="bottom-dd" 
-              placeholder="Amount" 
-              (keyup)="calculateAmountsOut('bottom', +getValue($event))"
-              id="destInput"
-            >
+          <div class="content">
+            <button class="ui button width-button">Swap</button>
           </div>
-        </div>
-        <div class="content">
-          <button class="ui button fluid">Swap</button>
-        </div>
+      </div>
     </div>
+
+
+
 </div>
+
+

@@ -8,11 +8,13 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { HomeModule } from './scenes';
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
+    FooterComponent,
     
   ],
   imports: [
