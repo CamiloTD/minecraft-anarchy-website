@@ -5,6 +5,7 @@ import { DevelopmentComponent } from 'src/app/components/development/development
 import { MissionVisionComponent } from 'src/app/components/mission-vision/mission-vision.component';
 import { ProductsComponent } from 'src/app/components/products/products.component';
 import { ContactComponent } from 'src/app/components/contact/contact.component';
+import { ExploreMapComponent } from 'src/app/components/exploremap/exploremap.component';
 
 
 
@@ -15,6 +16,7 @@ import { ContactComponent } from 'src/app/components/contact/contact.component';
     DevelopmentComponent,
     MissionVisionComponent,
     ContactComponent,
+    ExploreMapComponent
   ],
   imports: [
     CommonModule

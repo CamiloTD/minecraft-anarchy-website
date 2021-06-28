@@ -5,6 +5,7 @@ import { ProductsComponent } from "src/app/components/products/products.componen
 import { DevelopmentComponent } from "src/app/components/development/development.component";
 import { MissionVisionComponent } from "src/app/components/mission-vision/mission-vision.component";
 import { ContactComponent } from "src/app/components/contact/contact.component";
+import { ExploreMapComponent } from "src/app/components/exploremap/exploremap.component";
 
 export const HomeRoutes: Route[] = [
    {
@@ -31,6 +32,10 @@ export const HomeRoutes: Route[] = [
                 path:'contact-us',
                 component:ContactComponent
             },
+            {
+                path: 'exploremap',
+                component: ExploreMapComponent
+            }
        ]
        
    },
