@@ -1,55 +1,132 @@
-<div class="ui type-font statistic stats">
-    <div class=" type-font value">
-      {{ totalWalletAmount.toFixed(2) }}
+<div class="ui information-grid" >
+    <div class="ui UserInformation">
+        <img class="user" src="../../../assets/avatars/hombreazul.jpg" alt="">
+
+        <div class=" wordsUser">
+            <p class="type-font">Inserte algo aqui</p>
+            <h2 class="type-font"> UribeParaco </h2>
+            <div class="type-font conectado"> <div class="circle"></div> Conectado </div>
+            <button class="ui button green-background">
+                Level 8
+            </button>
+        </div>  
     </div>
-    <div class=" type-font label">
-      Obsidian in market cap
+
+    <div class="ui rigth">
+        <h1> A piece of <br> advice </h1>
+        <div class="type-font text-up"> In this lever you can 
+            funny with the mosters, 
+            but beware of monsters 
+            higher levels than your, 
+            naw funny! </div>
     </div>
+</div>
+
+
+   
+
+ <div class="ui type-font stats Obsidian divUp">
+        <div class=" marginBottomE">
+            <div class=" type-font data colorWhiteL">
+                {{ totalWalletAmount.toFixed(2) }}
+            </div>
+            <div class=" type-font colorWhiteL sizeObsidian">
+            <b class="type-font colorWhiteL">  Obsidian </b> in market cap
+            </div>
+        </div>
+
+        <div class="ui search">
+            <div class="ui input ">
+            <input class="prompt bordersSearch" type="text" placeholder="Search Items..">
+            </div>
+            
+            <div class="ui animated button color-button" tabindex="0">
+                <div class="visible content type-font"> <i class="search icon"></i> </div>
+                <div class="hidden content type-font">
+                    Search
+                </div>
+            </div>
+
+            <div class="results"></div>
+        </div>
+
   </div>
 
-<table class="ui five column table">
-    <thead>
-        <tr>
-            <th class="type-font font-size color-green">Item</th>
-            <th class="type-font font-size">Your Balance</th>
-            <th class="type-font font-size color-green">Your capitalization</th>
-            <th class="type-font font-size">Liquidity</th>
-            <th class="type-font font-size color-green">Price</th>
-            <th class="type-font font-size">24h Change</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let token of displayTokenList">
-            <td>
-                <img class="item-icon" [src]="token.logoURI">
-                {{token.name}}
-            </td>
-            <td class="split-label type-font">
-                {{tokenBalances[token.address]}}
-                <img *ngIf="tokenPrices[token.address]" class="ui left floated image item-icon" [src]="token.logoURI">
-            </td>
-            <td class="split-label type-font">
-                {{tokenBalances[token.address] * tokenPrices[token.address].price}}
-                <img class="ui left floated image item-icon" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
-            </td>
-            <td>
-                {{tokenPrices[token.address] && tokenPrices[token.address].tokenBalance.toFixed(1) }} 
-                <div class=" type-font placeholder-liquidity ui placeholder" *ngIf="!tokenPrices[token.address]">
-                    <div class="very short line "></div>
-                </div>
-                
-                <img *ngIf="tokenPrices[token.address]" class="item-icon type-font" [src]="token.logoURI">
-                {{tokenPrices[token.address] && tokenPrices[token.address]?.baseBalance.toFixed(1)}} 
-                <div class="placeholder-liquidity ui placeholder type-font" *ngIf="!tokenPrices[token.address]">
-                    <div class="very short line"></div>
-                </div>
-                <img class="item-icon type-font" *ngIf="tokenPrices[token.address]" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
-            </td>
-            <td>
-                {{(tokenPrices[token.address]?.price).toFixed(4)}}
-                <img class="item-icon type-fonts" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
-            </td>
-            <td>0</td>
-        </tr>
-    <tbody>
-</table>
+    <div class="between">
+    </div>
+
+    <div class="shadow">
+    </div>
+
+
+<div class="background-white ui card">
+    <table class="ui five column table">
+        <thead class="square-red">
+            <tr class="square-red">
+                <th class="type-font font-size">Item</th>
+                <th class="type-font font-size">Your Balance</th>
+                <th class="type-font font-size">Your capitalization</th>
+                <th class="type-font font-size">Liquidity</th>
+                <th class="type-font font-size">Price</th>
+                <th class="type-font font-size">24h Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let token of displayTokenList">
+                <td>
+                    <img class="item-icon" [src]="token.logoURI">
+                    {{token.name}}
+                </td>
+                <td class="split-label type-font">
+                    {{tokenBalances[token.address]}}
+                    <img *ngIf="tokenPrices[token.address]" class="ui left floated image item-icon" [src]="token.logoURI">
+                </td>
+                <td class="split-label type-font">
+                    {{tokenBalances[token.address] * tokenPrices[token.address].price}}
+                    <img class="ui left floated image item-icon" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
+                </td>
+                <td>
+                    {{tokenPrices[token.address] && tokenPrices[token.address].tokenBalance.toFixed(1) }} 
+                    <div class=" type-font placeholder-liquidity ui placeholder" *ngIf="!tokenPrices[token.address]">
+                        <div class="very short line "></div>
+                    </div>
+                    
+                    <img *ngIf="tokenPrices[token.address]" class="item-icon type-font" [src]="token.logoURI">
+                    {{tokenPrices[token.address] && tokenPrices[token.address]?.baseBalance.toFixed(1)}} 
+                    <div class="placeholder-liquidity ui placeholder type-font" *ngIf="!tokenPrices[token.address]">
+                        <div class="very short line"></div>
+                    </div>
+                    <img class="item-icon type-font" *ngIf="tokenPrices[token.address]" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
+                </td>
+                <td>
+                    {{(tokenPrices[token.address]?.price).toFixed(4)}}
+                    <img class="item-icon type-fonts" src="https://raw.githubusercontent.com/undrfined/mc-icons/master/pics/49_Obsidian.png">
+                </td>
+                <td>0</td>
+            </tr>
+        <tbody>
+    </table>
+</div>
+
+<div class="background-green ">
+    <div class="type-font colorWhiteL titleGreen">
+        Your Statistics
+        <hr>
+    </div>
+
+    <div class="nosewe">
+        <div>
+            <div class="type-font colorWhiteL fontSizeGreen">499</div>
+            <div class="type-font colorWhiteL fontSizeGreenDown">ranking</div>
+        </div>
+        <div>
+            <div class="type-font colorWhiteL fontSizeGreen">5,499</div>
+            <div class="type-font colorWhiteL fontSizeGreenDown">Land</div>
+        </div>
+        
+        <div>
+            <div class="type-font colorWhiteL fontSizeGreen">Wisdom</div>
+            <div class="type-font colorWhiteL fontSizeGreenDown">Clan Name</div>
+        </div>
+    </div>
+</div>

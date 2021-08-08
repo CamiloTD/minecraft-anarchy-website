@@ -26,4 +26,9 @@ export class ProductsComponent implements OnInit {
     console.log(this.tokenPrices)
   }
 
+  //$('.ui.search')
+  //.search({
+    //source: tokenList
+  //});
+
 }
