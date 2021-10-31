@@ -7,7 +7,7 @@ let LoadPromise: Promise<any> | null = null;
 export const TokenData: any = {};
 export const TokenBalance: any = {};
 export const Tokens = () => TokenList.tokens
-    .filter(token => TokenData[token.address]);
+    .filter(token => TokenBalance[token.address]);
 
 export async function loadTokens () {
     if(LoadPromise) {
@@ -17,7 +17,6 @@ export async function loadTokens () {
 
     LoadPromise = Promise.all(TokenList.tokens.map(async token => {
         const prices = await getPrice(token.address);
-        if(!prices) return;
         
         TokenData[token.address] = prices;
         TokenBalance[token.address] = await tokenBalance(token.address, await getCurrentAddress());

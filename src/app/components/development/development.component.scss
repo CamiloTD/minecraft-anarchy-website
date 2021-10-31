@@ -75,11 +75,8 @@
 .width-button{
     width: 40%;
     background-color: #1A6D63;
-    align-self: center !important;
     color: #fff;
     margin-top: 2rem;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 :hover.width-button{
     color: #fff;
@@ -104,4 +101,18 @@
 .separar{
     margin-bottom: 1rem;
 
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    
+    button {
+        width: 90%;
+    }
+}
+
+.add-liquidity {
+    background-color: #0B5C62;
 }

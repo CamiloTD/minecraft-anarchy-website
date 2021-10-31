@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { loadTokens, Tokens } from 'lib/tokens';
-import { COMMON_BASE, UniswapV2Router02 } from 'lib/web3/web3';
+import { COMMON_BASE, createPair, getPair, UniswapV2Router02 } from 'lib/web3/web3';
 import { TokenList } from 'tokens/tokenlist';
 
 @Component({
@@ -23,6 +23,7 @@ export class DevelopmentComponent implements OnInit {
 
   async calculateAmountsOut (side: 'top' | 'bottom', amount: number) {
     if(!this.originAsset || !this.destinationAsset) return;
+
 
     if(side === "top") {
       const [,,amountsOut] = await UniswapV2Router02.methods.getAmountsOut(
@@ -53,6 +54,12 @@ export class DevelopmentComponent implements OnInit {
 
   get destinationAsset () {
     return (window as any).$('#destinationAsset').dropdown('get value')
+  }
+  
+  async addLiquidity () {
+    const pair = await getPair(this.originAsset) || await createPair(this.originAsset);
+
+    console.log(pair);
   }
 
 }

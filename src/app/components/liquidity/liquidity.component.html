@@ -1,0 +1,67 @@
+<div class="main-div">
+
+  <img class="image-background" src="../../../assets/imgs/squareheadlittle.png" alt="malamente">
+
+
+
+    <div class="main">
+      <div class=" card">
+          <div class="content">
+            <div class="title1 type-font">Liquidity manager</div>
+          </div>
+          <div class="content">
+              <div class="ui fluid selection dropdown top-dd type-font" id="liquidity-originAsset">
+                  <input class="type-font" type="hidden" name="user">
+                  <i class="dropdown icon"></i>
+                  <div class="default text type-font">Asset #1</div>
+                  <div class="menu type-font">
+                    <ng-container *ngFor="let token of tokenList">
+                          <div class="item" attr.data-value="{{token.address}}">
+                            <img class="ui mini avatar image type-font" [src]="token.logoURI">
+                            {{ token.name }}
+                          </div>
+                    </ng-container>
+                  </div>
+              </div>
+
+
+
+              <div class="ui input fluid bottom-dd color-input">
+                <input 
+                  type="number" 
+                  class="bottom-dd type-font" 
+                  placeholder="Amount"
+                  (keyup)="calculateAmountsOut('top', +getValue($event))"
+                  id="liquidity-originInput"
+                >
+              </div>
+          </div>
+
+          <i class="plus icon"></i>
+
+          <div class="content obsidian">
+            <div class="img-container">
+              <img class="ui mini avatar image type-font" [src]="commonBase">
+            </div>
+            <div class="ui input fluid bottom-dd">
+              <input 
+                type="number" 
+                class="bottom-dd type-font" 
+                placeholder="Amount" 
+                (keyup)="calculateAmountsOut('bottom', +getValue($event))"
+                id="liquidity-destinationInput"
+              >
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="ui button width-button">Swap</button>
+            <button class="ui button width-button add-liquidity" (click)="addLiquidity()">Add Liquidity</button>
+          </div>
+      </div>
+    </div>
+
+
+
+</div>
+
+
